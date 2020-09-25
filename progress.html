@@ -81,7 +81,7 @@
         }
 
         .progressBar_percentage_dark__p8Zjq {
-            background-color: #f5f5f5
+            background-color: #fc0fc0;
         }
 
         .progressBar_progressText__1A3fz {
@@ -197,15 +197,14 @@
             var startOfDay = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()).getTime()
             var endOfDay= new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(),23,59,59).getTime()
             var endOfDayPerc = Math.round(( (today-startOfDay)/(endOfDay-startOfDay)) *100)
-
-            var birthday = new Date(1989,04,18)
+            
+            var birthday = new Date(1976,07,17)
             var startOfLife = birthday.getTime()
-
+            
             var endOfLifeCalc = birthday; 
             endOfLifeCalc.setFullYear(birthday.getFullYear() + 90);
             var endOfLife = endOfLifeCalc.getTime(); 
             var endOfLifePerc = Math.round(( (today-startOfLife)/(endOfLife-startOfLife)) *100)
-
 
             document.getElementById('dayBar').style.width = endOfDayPerc+"%";
             document.getElementById('dayText').innerHTML = "Day: "+  endOfDayPerc+"%";
@@ -219,13 +218,8 @@
             document.getElementById('lifeBar').style.width = endOfLifePerc+"%";
             document.getElementById('lifeText').innerHTML = "Life: "+  endOfLifePerc+"%";
 
-
             var t = setTimeout(startbars, 15000);
         }
-
-
-
-
     </script>
 </body>
 
